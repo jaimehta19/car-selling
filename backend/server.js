@@ -28,6 +28,10 @@ app.get('/', (req, res) => {
   res.sendFile(path.join(__dirname, '../frontend/index.html'));
 });
 
+app.get('/contact', function(req, res) {
+    // Send the HTML file containing the contact form
+    res.sendFile(path.join(__dirname, '../frontend/contact.html'));
+  });
 app.post('/login', (req, res) => {
 
   req.session.loggedIn = true; 
